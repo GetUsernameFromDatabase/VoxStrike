@@ -1,0 +1,336 @@
+# reference for writing toml
+# https://toml.io/en/v1.0.0
+
+# available keybinds can be found from
+# https://github.com/obv-mikhail/InputBot/blob/develop/src/public.rs#L97
+record_keybind = "numpad1"
+
+[whisper]
+# add command names here that this application does not seem to recognize it should help
+# Whisper Prompting Guide https://cookbook.openai.com/examples/whisper_prompting_guide
+# limit is 224 (or 244, sources can be inconsistent) tokens
+# if limit is reached then everything before the limit is not taken into account
+# (last part of prompt that fits in limit is used)
+# 1 token could equal to about 1.3 words in english (not sure however)
+# source: https://community.openai.com/t/understanding-token-limits-feeding-whisper-to-gpt-4/408995/5
+initial_prompt = """Glossary:
+reinforce,
+resupply,
+airstrike,
+expendable anti-tank,
+autocannon,
+grenade launcher,
+guard rover,
+hellbomb,
+orbital laser,
+airburst Strike,
+flamethrower
+"""
+
+# commands taken from helldivers fandom
+# https://helldivers.fandom.com/wiki/Stratagem_Codes_(Helldivers_2)
+[[commands]]
+name = "jump pack"
+action = "SWWSW"
+modifiers = ["LeftControl"]
+
+[[commands]]
+name = "supply pack"
+action = "SASWWS"
+modifiers = ["LeftControl"]
+
+[[commands]]
+name = "guard rover"
+action = "SWAWDD"
+modifiers = ["LeftControl"]
+
+[[commands]]
+name = "ballistic shield"
+action = "SASSWA"
+modifiers = ["LeftControl"]
+
+[[commands]]
+name = "shield pack"
+action = "SWADAD"
+modifiers = ["LeftControl"]
+
+[[commands]]
+name = "guard dog"
+action = "SWAWDS"
+modifiers = ["LeftControl"]
+
+[[commands]]
+name = "machine gun"
+action = "SASWD"
+modifiers = ["LeftControl"]
+
+[[commands]]
+name = "anti-materiel rifle"
+action = "SADWS"
+modifiers = ["LeftControl"]
+
+[[commands]]
+name = "stalwart"
+action = "SASWWA"
+modifiers = ["LeftControl"]
+
+[[commands]]
+name = "expendable anti-tank"
+action = "SSAWD"
+modifiers = ["LeftControl"]
+
+[[commands]]
+name = "recoilless rifle"
+action = "SADDA"
+modifiers = ["LeftControl"]
+
+[[commands]]
+name = "flamethrower"
+action = "SAWSW"
+modifiers = ["LeftControl"]
+
+[[commands]]
+name = "autocannon"
+action = "SASWWD"
+modifiers = ["LeftControl"]
+
+[[commands]]
+name = "heavy machine gun"
+action = "SAWSS"
+modifiers = ["LeftControl"]
+
+[[commands]]
+name = "railgun"
+action = "SDSWAD"
+modifiers = ["LeftControl"]
+
+[[commands]]
+name = "spear"
+action = "SSWSS"
+modifiers = ["LeftControl"]
+
+[[commands]]
+name = "grenade launcher"
+action = "SAWAS"
+modifiers = ["LeftControl"]
+
+[[commands]]
+name = "laser cannon"
+action = "SASWA"
+modifiers = ["LeftControl"]
+
+[[commands]]
+name = "arc thrower"
+action = "SDSWAA"
+modifiers = ["LeftControl"]
+
+[[commands]]
+name = "quasar cannon"
+action = "SSWAD"
+modifiers = ["LeftControl"]
+
+[[commands]]
+name = "airburst rocket launcher"
+action = "SWWAD"
+modifiers = ["LeftControl"]
+
+[[commands]]
+name = "patriot exosuit"
+action = "ASDWASS"
+modifiers = ["LeftControl"]
+
+[[commands]]
+name = "reinforce"
+action = "WSDAW"
+modifiers = ["LeftControl"]
+
+[[commands]]
+name = "sos beacon"
+action = "WSDW"
+modifiers = ["LeftControl"]
+
+[[commands]]
+name = "resupply"
+action = "SSWD"
+modifiers = ["LeftControl"]
+
+[[commands]]
+name = "hellbomb"
+action = "SWASWDSW"
+modifiers = ["LeftControl"]
+
+[[commands]]
+name = "sssd delivery"
+action = "SSSWW"
+modifiers = ["LeftControl"]
+
+[[commands]]
+name = "seismic probe"
+action = "WWADSS"
+modifiers = ["LeftControl"]
+
+[[commands]]
+name = "upload data"
+action = "ADWWW"
+modifiers = ["LeftControl"]
+
+[[commands]]
+name = "eagle rearm"
+action = "WWAWD"
+modifiers = ["LeftControl"]
+
+[[commands]]
+name = "illumination flare"
+action = "DDAA"
+modifiers = ["LeftControl"]
+
+[[commands]]
+name = "artillery"
+action = "DWWS"
+modifiers = ["LeftControl"]
+
+[[commands]]
+name = "flag"
+action = "SWSW"
+modifiers = ["LeftControl"]
+
+[[commands]]
+name = "hmg emplacement"
+action = "SWADDA"
+modifiers = ["LeftControl"]
+
+[[commands]]
+name = "shield generator"
+action = "SSADAD"
+modifiers = ["LeftControl"]
+
+[[commands]]
+name = "tesla tower"
+action = "SWDWAD"
+modifiers = ["LeftControl"]
+
+[[commands]]
+name = "anti-personnel mines"
+action = "SAWD"
+modifiers = ["LeftControl"]
+
+[[commands]]
+name = "incendiary mines"
+action = "SAAS"
+modifiers = ["LeftControl"]
+
+[[commands]]
+name = "machine gun sentry"
+action = "SWDDW"
+modifiers = ["LeftControl"]
+
+[[commands]]
+name = "gatling sentry"
+action = "SWDA"
+modifiers = ["LeftControl"]
+
+[[commands]]
+name = "mortar sentry"
+action = "SWDDS"
+modifiers = ["LeftControl"]
+
+[[commands]]
+name = "autocannon sentry"
+action = "SWDWAW"
+modifiers = ["LeftControl"]
+
+[[commands]]
+name = "rocket sentry"
+action = "SWDDA"
+modifiers = ["LeftControl"]
+
+[[commands]]
+name = "mortar sentry"
+action = "SWDSD"
+modifiers = ["LeftControl"]
+
+[[commands]]
+name = "gatling barrage"
+action = "DSAWW"
+modifiers = ["LeftControl"]
+
+[[commands]]
+name = "airburst strike"
+action = "DDD"
+modifiers = ["LeftControl"]
+
+[[commands]]
+name = "120mm barrage"
+action = "DDSADS"
+modifiers = ["LeftControl"]
+
+[[commands]]
+name = "380mm barrage"
+action = "DSWWASS"
+modifiers = ["LeftControl"]
+
+[[commands]]
+name = "walking barrage"
+action = "DSDSDS"
+modifiers = ["LeftControl"]
+
+[[commands]]
+name = "orbital laser"
+action = "DSWDS"
+modifiers = ["LeftControl"]
+
+[[commands]]
+name = "railcannon strike"
+action = "DWSSD"
+modifiers = ["LeftControl"]
+
+[[commands]]
+name = "precision strike"
+action = "DDW"
+modifiers = ["LeftControl"]
+
+[[commands]]
+name = "gas strike"
+action = "DDSDD"
+modifiers = ["LeftControl"]
+
+[[commands]]
+name = "ems strike"
+action = "DDAS"
+modifiers = ["LeftControl"]
+
+[[commands]]
+name = "orbital smoke"
+action = "DDSW"
+modifiers = ["LeftControl"]
+
+[[commands]]
+name = "strafing run"
+action = "WDD"
+modifiers = ["LeftControl"]
+
+[[commands]]
+name = "airstrike"
+action = "WDSD"
+modifiers = ["LeftControl"]
+
+[[commands]]
+name = "cluster bomb"
+action = "WDSSD"
+modifiers = ["LeftControl"]
+
+[[commands]]
+name = "napalm airstrike"
+action = "WDSW"
+modifiers = ["LeftControl"]
+
+[[commands]]
+name = "eagle smoke"
+action = "WDWS"
+modifiers = ["LeftControl"]
+
+[[commands]]
+name = "500kg bomb"
+action = "WDSSS"
+modifiers = ["LeftControl"]
+
