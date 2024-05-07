@@ -23,7 +23,7 @@ grenade launcher,
 guard rover,
 hellbomb,
 orbital laser,
-airburst Strike,
+airburst strike,
 flamethrower
 """
 
@@ -31,306 +31,306 @@ flamethrower
 # https://helldivers.fandom.com/wiki/Stratagem_Codes_(Helldivers_2)
 [[commands]]
 name = "jump pack"
-action = "SWWSW"
+action = "swwsw"
 modifiers = ["LeftControl"]
 
 [[commands]]
 name = "supply pack"
-action = "SASWWS"
+action = "saswws"
 modifiers = ["LeftControl"]
 
 [[commands]]
 name = "guard rover"
-action = "SWAWDD"
+action = "swawdd"
 modifiers = ["LeftControl"]
 
 [[commands]]
 name = "ballistic shield"
-action = "SASSWA"
+action = "sasswa"
 modifiers = ["LeftControl"]
 
 [[commands]]
 name = "shield pack"
-action = "SWADAD"
+action = "swadad"
 modifiers = ["LeftControl"]
 
 [[commands]]
 name = "guard dog"
-action = "SWAWDS"
+action = "swawds"
 modifiers = ["LeftControl"]
 
 [[commands]]
 name = "machine gun"
-action = "SASWD"
+action = "saswd"
 modifiers = ["LeftControl"]
 
 [[commands]]
 name = "anti-materiel rifle"
-action = "SADWS"
+action = "sadws"
 modifiers = ["LeftControl"]
 
 [[commands]]
 name = "stalwart"
-action = "SASWWA"
+action = "saswwa"
 modifiers = ["LeftControl"]
 
 [[commands]]
 name = "expendable anti-tank"
-action = "SSAWD"
+action = "ssawd"
 modifiers = ["LeftControl"]
 
 [[commands]]
 name = "recoilless rifle"
-action = "SADDA"
+action = "sadda"
 modifiers = ["LeftControl"]
 
 [[commands]]
 name = "flamethrower"
-action = "SAWSW"
+action = "sawsw"
 modifiers = ["LeftControl"]
 
 [[commands]]
 name = "autocannon"
-action = "SASWWD"
+action = "saswwd"
 modifiers = ["LeftControl"]
 
 [[commands]]
 name = "heavy machine gun"
-action = "SAWSS"
+action = "sawss"
 modifiers = ["LeftControl"]
 
 [[commands]]
 name = "railgun"
-action = "SDSWAD"
+action = "sdswad"
 modifiers = ["LeftControl"]
 
 [[commands]]
 name = "spear"
-action = "SSWSS"
+action = "sswss"
 modifiers = ["LeftControl"]
 
 [[commands]]
 name = "grenade launcher"
-action = "SAWAS"
+action = "sawas"
 modifiers = ["LeftControl"]
 
 [[commands]]
 name = "laser cannon"
-action = "SASWA"
+action = "saswa"
 modifiers = ["LeftControl"]
 
 [[commands]]
 name = "arc thrower"
-action = "SDSWAA"
+action = "sdswaa"
 modifiers = ["LeftControl"]
 
 [[commands]]
 name = "quasar cannon"
-action = "SSWAD"
+action = "sswad"
 modifiers = ["LeftControl"]
 
 [[commands]]
 name = "airburst rocket launcher"
-action = "SWWAD"
+action = "swwad"
 modifiers = ["LeftControl"]
 
 [[commands]]
 name = "patriot exosuit"
-action = "ASDWASS"
+action = "asdwass"
 modifiers = ["LeftControl"]
 
 [[commands]]
 name = "reinforce"
-action = "WSDAW"
+action = "wsdaw"
 modifiers = ["LeftControl"]
 
 [[commands]]
 name = "sos beacon"
-action = "WSDW"
+action = "wsdw"
 modifiers = ["LeftControl"]
 
 [[commands]]
 name = "resupply"
-action = "SSWD"
+action = "sswd"
 modifiers = ["LeftControl"]
 
 [[commands]]
 name = "hellbomb"
-action = "SWASWDSW"
+action = "swaswdsw"
 modifiers = ["LeftControl"]
 
 [[commands]]
 name = "sssd delivery"
-action = "SSSWW"
+action = "sssww"
 modifiers = ["LeftControl"]
 
 [[commands]]
 name = "seismic probe"
-action = "WWADSS"
+action = "wwadss"
 modifiers = ["LeftControl"]
 
 [[commands]]
 name = "upload data"
-action = "ADWWW"
+action = "adwww"
 modifiers = ["LeftControl"]
 
 [[commands]]
 name = "eagle rearm"
-action = "WWAWD"
+action = "wwawd"
 modifiers = ["LeftControl"]
 
 [[commands]]
 name = "illumination flare"
-action = "DDAA"
+action = "ddaa"
 modifiers = ["LeftControl"]
 
 [[commands]]
 name = "artillery"
-action = "DWWS"
+action = "dwws"
 modifiers = ["LeftControl"]
 
 [[commands]]
 name = "flag"
-action = "SWSW"
+action = "swsw"
 modifiers = ["LeftControl"]
 
 [[commands]]
 name = "hmg emplacement"
-action = "SWADDA"
+action = "swadda"
 modifiers = ["LeftControl"]
 
 [[commands]]
 name = "shield generator"
-action = "SSADAD"
+action = "ssadad"
 modifiers = ["LeftControl"]
 
 [[commands]]
 name = "tesla tower"
-action = "SWDWAD"
+action = "swdwad"
 modifiers = ["LeftControl"]
 
 [[commands]]
 name = "anti-personnel mines"
-action = "SAWD"
+action = "sawd"
 modifiers = ["LeftControl"]
 
 [[commands]]
 name = "incendiary mines"
-action = "SAAS"
+action = "saas"
 modifiers = ["LeftControl"]
 
 [[commands]]
 name = "machine gun sentry"
-action = "SWDDW"
+action = "swddw"
 modifiers = ["LeftControl"]
 
 [[commands]]
 name = "gatling sentry"
-action = "SWDA"
+action = "swda"
 modifiers = ["LeftControl"]
 
 [[commands]]
 name = "mortar sentry"
-action = "SWDDS"
+action = "swdds"
 modifiers = ["LeftControl"]
 
 [[commands]]
 name = "autocannon sentry"
-action = "SWDWAW"
+action = "swdwaw"
 modifiers = ["LeftControl"]
 
 [[commands]]
 name = "rocket sentry"
-action = "SWDDA"
+action = "swdda"
 modifiers = ["LeftControl"]
 
 [[commands]]
 name = "mortar sentry"
-action = "SWDSD"
+action = "swdsd"
 modifiers = ["LeftControl"]
 
 [[commands]]
 name = "gatling barrage"
-action = "DSAWW"
+action = "dsaww"
 modifiers = ["LeftControl"]
 
 [[commands]]
 name = "airburst strike"
-action = "DDD"
+action = "ddd"
 modifiers = ["LeftControl"]
 
 [[commands]]
 name = "120mm barrage"
-action = "DDSADS"
+action = "ddsads"
 modifiers = ["LeftControl"]
 
 [[commands]]
 name = "380mm barrage"
-action = "DSWWASS"
+action = "dswwass"
 modifiers = ["LeftControl"]
 
 [[commands]]
 name = "walking barrage"
-action = "DSDSDS"
+action = "dsdsds"
 modifiers = ["LeftControl"]
 
 [[commands]]
 name = "orbital laser"
-action = "DSWDS"
+action = "dswds"
 modifiers = ["LeftControl"]
 
 [[commands]]
 name = "railcannon strike"
-action = "DWSSD"
+action = "dwssd"
 modifiers = ["LeftControl"]
 
 [[commands]]
 name = "precision strike"
-action = "DDW"
+action = "ddw"
 modifiers = ["LeftControl"]
 
 [[commands]]
 name = "gas strike"
-action = "DDSDD"
+action = "ddsdd"
 modifiers = ["LeftControl"]
 
 [[commands]]
 name = "ems strike"
-action = "DDAS"
+action = "ddas"
 modifiers = ["LeftControl"]
 
 [[commands]]
 name = "orbital smoke"
-action = "DDSW"
+action = "ddsw"
 modifiers = ["LeftControl"]
 
 [[commands]]
 name = "strafing run"
-action = "WDD"
+action = "wdd"
 modifiers = ["LeftControl"]
 
 [[commands]]
 name = "airstrike"
-action = "WDSD"
+action = "wdsd"
 modifiers = ["LeftControl"]
 
 [[commands]]
 name = "cluster bomb"
-action = "WDSSD"
+action = "wdssd"
 modifiers = ["LeftControl"]
 
 [[commands]]
 name = "napalm airstrike"
-action = "WDSW"
+action = "wdsw"
 modifiers = ["LeftControl"]
 
 [[commands]]
 name = "eagle smoke"
-action = "WDWS"
+action = "wdws"
 modifiers = ["LeftControl"]
 
 [[commands]]
 name = "500kg bomb"
-action = "WDSSS"
+action = "wdsss"
 modifiers = ["LeftControl"]
 
