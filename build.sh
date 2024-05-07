@@ -4,7 +4,7 @@ cargo build --release
 
 mkdir -p output
 if [ -d "output" ]; then
-    rm -rf build/*
+    rm -rf output/*
 fi
 
 cp log4rs.yml output/
