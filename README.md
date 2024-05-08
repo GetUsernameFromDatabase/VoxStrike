@@ -2,6 +2,8 @@
 
 Voice activated macros made in [rust](https://www.rust-lang.org/).
 
+Does not work in-game -- I suspect [nProtect GameGuard](https://en.wikipedia.org/wiki/NProtect_GameGuard) is not allowing for keypresses in Helldivers 2.
+
 There are a lot of firsts with this project:
 
 - first time using [rust](https://www.rust-lang.org/)

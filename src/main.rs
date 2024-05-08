@@ -8,17 +8,22 @@ use std::{
 };
 
 mod audio;
-mod settings;
-mod profiles;
-mod speech_to_text;
 mod inputbot_patch;
+mod profiles;
+mod settings;
+mod speech_to_text;
 
 pub fn main() {
-    settings::init_logger().expect("logger failed to initialize");
     let args = settings::CommandArguments::new();
+    settings::init_logger().expect("logger failed to initialize");
+    speech_to_text::load(&args.model_path);
+
     let vox_audio = Arc::new(audio::VoxAudio::new(&args));
     let input_config = vox_audio.input_stream_config();
-    speech_to_text::load(&args.model_path);
+    let key_delay = Duration::from_millis(args.key_delay);
+    // toml profile config
+    let config = Arc::new(Mutex::new(profiles::Config::new(&args)));
+    let record_keybind = config.lock().unwrap().profile.record_keybind;
 
     info!(
         "using input device: {:?}",
@@ -30,11 +35,6 @@ pub fn main() {
     info!("using input config: {:?}", input_config);
     // this just here to seperate better in console
     println!();
-
-    // -------------------------------------------------------------------------
-
-    let config = Arc::new(Mutex::new(profiles::Config::new(&args)));
-    let record_keybind = config.lock().unwrap().profile.record_keybind;
 
     // -------------------------------------------------------------------------
 
@@ -67,9 +67,10 @@ pub fn main() {
         }
 
         let local_config = config.lock().unwrap();
-        let stream_result = local_stream
-            .unwrap()
-            .finish_stream(&local_config.profile.whisper.initial_prompt, input_config.channels());
+        let stream_result = local_stream.unwrap().finish_stream(
+            &local_config.profile.whisper.initial_prompt,
+            input_config.channels(),
+        );
         info!("[RECORDING] stream result: {}", stream_result);
 
         let rgx = PROMPT_REGEX.get().expect("regex required");
@@ -78,8 +79,9 @@ pub fn main() {
         match command {
             None => info!("[ACTION] no command found with {}", processed_result),
             Some(c) => {
-                info!("[ACTION] executing command {}", c.name);
-                c.execute();
+                info!("[ACTION] executing command '{}'", c.name);
+                c.execute(key_delay);
+                info!("[ACTION] command finished")
             }
         }
     });

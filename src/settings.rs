@@ -30,9 +30,9 @@ pub struct CommandArguments {
     #[arg(short, long, default_value_t = String::from("profiles/helldivers2.toml"))]
     pub profile_path: String,
 
-    /// The delay between each key press in `profiles.commands[i].action`\
-    /// in milliseconds
-    #[arg(short, long, default_value_t = 50)]
+    /// The delay (in milliseconds) between each key press in `profiles.commands[i].action`\
+    /// Feel free to increase this if key presses are not picked up or decrease to make them faster
+    #[arg(short, long, default_value_t = 69)]
     pub key_delay: u64,
 }
 

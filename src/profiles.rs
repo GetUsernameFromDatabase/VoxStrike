@@ -1,7 +1,7 @@
 use inputbot::KeybdKey;
 use regex::Regex;
 use serde::Deserialize;
-use std::{collections::HashMap, fs, time::Duration};
+use std::{collections::HashMap, fs, thread::sleep, time::Duration};
 
 use crate::{
     inputbot_patch::KeySequence, settings::CommandArguments, speech_to_text::PROMPT_REGEX,
@@ -19,16 +19,17 @@ pub struct Command {
 }
 
 impl Command {
-    pub fn execute(&self) {
+    pub fn execute(&self, delay: Duration) {
         match &self.modifiers {
             None => None,
             Some(m) => Some({
                 m.iter().for_each(|x| x.press());
+                sleep(delay);
             }),
         };
 
         let key_sequence = KeySequence(&self.action);
-        key_sequence.send(Duration::from_millis(50));
+        key_sequence.send(delay);
 
         match &self.modifiers {
             None => None,
@@ -62,8 +63,10 @@ impl Profile {
 
         // not actually sure if the following is needed
         let nrgx = Regex::new(r"[\n]+").expect("regex required");
-        parsed.whisper.initial_prompt = nrgx.replace_all(&parsed.whisper.initial_prompt, " ").to_string();
-        
+        parsed.whisper.initial_prompt = nrgx
+            .replace_all(&parsed.whisper.initial_prompt, " ")
+            .to_string();
+
         return parsed;
     }
 }
