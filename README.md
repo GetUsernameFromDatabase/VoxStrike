@@ -25,8 +25,34 @@ Currently development has been only done on windows so most likely won't work on
 ## Building
 
 Follow [whisper-rs build guide](https://github.com/tazz4843/whisper-rs/blob/master/BUILDING.md)
+> _Path for CMAKE could be similar to `C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin`_
 
-_Path for CMAKE could be similar to `C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin`_
+### Windows Specific
+
+Make sure you have toolkits installed required by [winres](https://github.com/mxre/winres?tab=readme-ov-file#toolkit).
+
+Since this application requires [uiAccess](https://learn.microsoft.com/en-us/previous-versions/bb756929(v=msdn.10)?redirectedfrom=MSDN#uiaccess-values) the application should be run under "Program Files".
+
+Install `signtool`, it is part of [Windows SDK](https://developer.microsoft.com/en-us/windows/downloads/windows-sdk/).\
+If you have Visual Studio installed, you might already have it installed, just not on path env variables
+-- `C:\Program Files (x86)\Windows Kits\10\App Certification Kit`
+
+Whatever certificate used by `signtool` must also be trusted by the system
+> this can be done my installing the certificate when viewing the `Digital Signatures` under .exe properties
+
+Currently I do not have a way to sign this application with an appropriate certificate.
+> should probably look into [MakeCert](https://learn.microsoft.com/en-us/windows/win32/seccrypto/makecert)
+
+---
+
+Then again winres and certificate part could be removed
+as I only dabbled in it in hopes that it would allow me to send inputs to Helldivers 2.
+
+[enigo](https://github.com/enigo-rs/enigo) notifies me with
+`simulating input failed: (not all input events were sent. they may have been blocked by UIPI)`
+> enigo is not included in the `cargo.toml`, I was just messing about with different libraries for keyboard inputs
+
+### Common
 
 Then build with
 

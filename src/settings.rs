@@ -10,6 +10,10 @@ pub fn init_logger() -> anyhow::Result<()> {
     return log4rs::init_file("log4rs.yml", Default::default());
 }
 
+pub fn init() {
+    init_logger().expect("logger to be initialized");
+}
+
 // -----------------------------------------------------------------------------
 
 #[derive(Parser, Debug)]

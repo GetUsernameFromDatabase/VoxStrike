@@ -15,7 +15,7 @@ mod speech_to_text;
 
 pub fn main() {
     let args = settings::CommandArguments::new();
-    settings::init_logger().expect("logger failed to initialize");
+    settings::init();
     speech_to_text::load(&args.model_path);
 
     let vox_audio = Arc::new(audio::VoxAudio::new(&args));
@@ -84,6 +84,14 @@ pub fn main() {
                 info!("[ACTION] command finished")
             }
         }
+
+        // let mut enigo = Enigo::new(&Settings::default()).unwrap();
+        // match enigo.key(Key::Unicode('s'), Direction::Click) {
+        //     Err(e) => {
+        //         error!("enigo error: {}", e)
+        //     }
+        //     Ok(()) => {}
+        // }
     });
 
     inputbot::handle_input_events(false);
